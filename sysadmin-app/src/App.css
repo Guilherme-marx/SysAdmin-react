@@ -1,0 +1,78 @@
+body{
+background-color: #d2d2d2;
+margin: 0;
+padding: 0;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #614DD8;
+    min-height: 20vh;
+    display: flex;
+    font-size: 1rem;
+    color: white;
+    flex-wrap: wrap;
+}
+
+/*  ESTILO DAS FONTES */
+h1{
+border-left:2px solid rgb(75, 233, 225) ;
+}
+
+h3 {
+  font-size: 2rem;
+  padding: 30px 0px 5px 30px;
+  font-weight: bold;
+  width: 100%;
+}
+
+p {
+  font-size: 1.3rem;
+  padding: 10px 30px;
+  font-weight: 400;
+  color: #494949;
+  width: 100%;
+  max-width: 610px;
+}
+
+span{
+color: aquamarine;
+}
+
+/* ESTILO DOS BOX1-2-3 */
+.box1{
+  background-color: #fff;
+  position: relative;
+  top: -60px;
+  border-radius: 20px;
+  height: auto;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+button {
+  border-radius: 2rem;
+  border: none;
+  background: #b2b2b2;
+  color: #494949;
+  padding: 7.1px 42px;
+
+}
+
+
+
+
+
+
+@media only screen and (min-width: 600px){
+  .App-header{
+    max-width: 306px;
+    height: 56px;
+  }
+  .box1{
+    margin-bottom: 17px;
+  }
+}
