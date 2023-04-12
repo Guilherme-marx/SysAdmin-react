@@ -1,43 +1,42 @@
 import React from "react";
 import { useState } from "react";
+import "../../App.css"
 
-const Tabela = () => {
-  const [nome, setNome] = useState("");
-  const [nomePai, setNomePai] = useState("");
-  const [nomeMae, setNomeMae] = useState("");
-  
-  const handleChange = (e) => {
-    
-    const {nome, value} = e.target;
-    setNome((prev) => {
-    return{...prev, [nome]: value };
-    })
-    const {nomePai, value2} = e.target;
-    setNome((prev) => {
-    return{...prev, [nomePai]: value2 };
-    })
-    const {nomeMae, value3} = e.target;
-    setNome((prev) => {
-    return{...prev, [nomeMae]: value3 };
-    })
+const initialValue = {
+nome:'',
+nomePai:'',
+nomeMae:'',
 }
 
-
+const Tabela = () => {
+  const [value, setValue] = useState(initialValue);
+  
+  
+  function onChange (ev) {
+    const { nome, value } = ev.target;
+}
 
   return (
-    <section>
+    <section className="box2">
+      <div name="nome" className="formulario">
       <label>
         seu nome
-        <input value={nome} onChange={(e) => setNome(e.target.value)} />
+        <input id="" type="text" name="nomePai" onChange={onChange} />
       </label>
       <label>
         Nome do Pai
-        <input value2={nomePai} onChange={(e) => setNomePai(e.target.value2)} />
+        <input id="" type="text" name="nomeMae" onChange={onChange} />
       </label>
       <label>
         Nome da Mae
-        <input value3={nomeMae} onChange={(e) => setNomeMae(e.target.value3)}/>
+        <input id="" type="text" name="nomeMae" onChange={onChange}/>
       </label>
+      <label>
+        Data de nascimento
+      <input type='date' />
+      </label>
+      <button type="submit">confirma</button>
+      </div>
     </section>
   );
 };
